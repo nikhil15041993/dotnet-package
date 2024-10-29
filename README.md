@@ -1,4 +1,4 @@
-Publishing a NuGet package to GitHub using .NET involves several steps, including creating the project, building the package, and then publishing it to a GitHub repository. Here’s a step-by-step guide to help you through the process:
+
 
 ## Prerequisites
 * Install .NET SDK: Ensure you have the .NET SDK installed. You can download it from the .NET Download page.
