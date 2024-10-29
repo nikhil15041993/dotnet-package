@@ -78,6 +78,25 @@ Create or edit a ```NuGet.config``` file in your project directory and add the f
   </packageSourceCredentials>
 </configuration>
 ```
+Replace <project_id> with your GitLab project's ID, which you can find in your project’s “Settings” > “General” page.
+
+### gitlab
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="gitlab" value="https://gitlab.com/api/v4/projects/<project_id>/packages/nuget/index.json" />
+  </packageSources>
+  <packageSourceCredentials>
+    <gitlab>
+      <add key="Username" value="YourGitLabUsername" />
+      <add key="ClearTextPassword" value="YourGitLabPAT" />
+    </gitlab>
+  </packageSourceCredentials>
+</configuration>
+
+```
+
 Replace YourUsername with your GitHub username and YourGitHubPAT with your personal access token.
 
 Publish the Package: Use the dotnet nuget push command to publish the package.
@@ -92,8 +111,7 @@ Go to your GitHub repository and navigate to the "Packages" section to verify th
 Example Project Structure
 Your project structure should look like this:
 
-arduino
-Copy code
+```
 MyAwesomeLibrary/
 ├── MyAwesomeLibrary.csproj
 ├── Class1.cs
@@ -101,3 +119,4 @@ MyAwesomeLibrary/
 └── bin/
     └── Release/
         └── MyAwesomeLibrary.1.0.0.nupkg
+```
