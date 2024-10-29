@@ -80,7 +80,12 @@ Create or edit a ```NuGet.config``` file in your project directory and add the f
 ```
 Replace <project_id> with your GitLab project's ID, which you can find in your project’s “Settings” > “General” page.
 
-### gitlab
+### Publish to GitLab Package Registry
+
+1. Create a GitLab Personal Access Token (PAT)
+Go to your GitLab Profile.
+Generate a token with the ```write_package_registry``` scope.
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
